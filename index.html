@@ -25,9 +25,13 @@
                 <td id="humidity"></td>
             </tr>
         </table>
-    
+        
+        <script type='text/javascript' src='config.js'></script>
         <script>
-            const apikey = "3db90823d106fae49487a5db3628bcad"
+            // const apikey = "3db90823d106fae49487a5db3628bcad"
+            var mykey = config.MY_KEY;
+            var secretkey = config.SECRET_KEY;
+
             let weatherJson = [];
 
             document.getElementById("search").addEventListener("click", () => {
@@ -35,7 +39,7 @@
                     let city = document.getElementById("searchCity").value;
                     let domain = "http://api.openweathermap.org/data/2.5/weather";
                    
-                    fetch(`${domain}?q=${city}&APPID=${apikey}`)
+                    fetch(`${domain}?q=${city}&APPID=${mykey}`)
                         .then(response=> response.json())
                         .then(json => {
                         weatherJson = json
