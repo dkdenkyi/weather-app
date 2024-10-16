@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Exercise 11</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Weather App</h1>
-        <div  class="search-style">
-            <label for="searchCity">Enter a city:</label>
-            <input id="searchCity">  
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        <div  class="content-style">
+            <label for="searchCity">Enter a City:</label>
+            <input id="searchCity" name="searchCity" placeholder="">  
             <button id="search">Search</button>
-        </div>    
-        <table id="products">
-            <tr>
-                <td>Temperature</td>
-                <td id="temp"></td>
-            </tr>
-            <tr>
-                <td>Wind</td>
-                <td id="wind"></td>
-            </tr>
-            <tr>
-                <td>Humidity</td>
-                <td id="humidity"></td>
-            </tr>
-        </table>
+        </div>
+        <div class="weather">   
+            <table>
+                <tr>
+                    <td>Temperature</td>
+                    <td id="temp"></td>
+                </tr>
+                <tr>
+                    <td>Wind</td>
+                    <td id="wind"></td>
+                </tr>
+                <tr>
+                    <td>Humidity</td>
+                    <td id="humidity"></td>
+                </tr>
+            </table>
+        </div> 
         
         <script type='text/javascript' src='config.js'></script>
         <script>
