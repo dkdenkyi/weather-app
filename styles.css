@@ -10,6 +10,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: Poppins;
+    font-weight: 400;
 }
 
 .content-style {
@@ -23,7 +25,7 @@ body {
 }
 
 label {
-    font-size: 24px;
+    font-size: 22px;
 }
 input {
     height: 20px;
@@ -31,6 +33,7 @@ input {
     margin-right: 20px;
     margin-left: 10px;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 button {
