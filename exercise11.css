@@ -1,0 +1,60 @@
+.content-style {
+    display: inline-flex;
+}
+
+select {
+    height: 22px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+table, th, td {
+    border-collapse: collapse;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px;
+}
+
+table{
+    margin: 0 auto;
+    margin-left: 0;
+    width: auto;       
+}
+
+tr:nth-child(even){
+    border-collapse:separate;
+}
+
+tr:nth-child(odd){
+    border: 1px black;
+}
+tr:hover {
+    background-color: grey;
+}
+
+th {
+    color: black; 
+    padding: 8px;   
+}
+
+td {
+    width: 100px;
+}
+.search-style {
+    display: inline-flex;
+}
+
+input {
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+button {
+    height: 20px;
+}

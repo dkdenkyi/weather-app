@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 11</title>
+        <link href="exercise11.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Weather App</h1>
+        <div  class="search-style">
+            <label for="searchCity">Enter a city:</label>
+            <input id="searchCity">  
+            <button id="search">Search</button>
+        </div>    
+        <table id="products">
+            <tr>
+                <td>Temperature</td>
+                <td id="temp"></td>
+            </tr>
+            <tr>
+                <td>Wind</td>
+                <td id="wind"></td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td id="humidity"></td>
+            </tr>
+        </table>
+    
+        <script>
+            const apikey = "3db90823d106fae49487a5db3628bcad"
+            let weatherJson = [];
+
+            document.getElementById("search").addEventListener("click", () => {
+
+                    let city = document.getElementById("searchCity").value;
+                    let domain = "http://api.openweathermap.org/data/2.5/weather";
+                   
+                    fetch(`${domain}?q=${city}&APPID=${apikey}`)
+                        .then(response=> response.json())
+                        .then(json => {
+                        weatherJson = json
+                        console.log(weatherJson);
+
+                        const temperature = weatherJson.main.temp;
+                        const wind = weatherJson.wind.speed;
+                        const humidity = weatherJson.main.humidity;
+
+                        document.getElementById("temp").textContent = (parseFloat(temperature)-273.15).toFixed(2) + " °C";
+                        document.getElementById("wind").textContent = wind + " m/s";
+                        document.getElementById("humidity").textContent = humidity+ "%";
+                        })
+                    }
+                )
+    
+        </script>
+    </body>
+</html>
