@@ -13,7 +13,7 @@ document.getElementById("search").addEventListener("click", () => {
             .then(response=> response.json())
             .then(json => {
             weatherJson = json
-            console.log(weatherJson);
+            // console.log(weatherJson);
 
             const temperature = weatherJson.main.temp;
             const wind = weatherJson.wind.speed;
