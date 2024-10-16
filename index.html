@@ -48,7 +48,7 @@
                         const wind = weatherJson.wind.speed;
                         const humidity = weatherJson.main.humidity;
 
-                        document.getElementById("temp").textContent = (parseFloat(temperature)-273.15).toFixed(2) + " °C";
+                        document.getElementById("temp").textContent = (parseFloat(temperature)-273.15).toFixed(0) + " °C";
                         document.getElementById("wind").textContent = wind + " m/s";
                         document.getElementById("humidity").textContent = humidity+ "%";
                         })
