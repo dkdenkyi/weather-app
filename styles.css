@@ -67,16 +67,12 @@ table, th, td {
     border: 1px solid black;
 }
 
-
 tr:nth-child(even){
     border-collapse:separate;
 }
 
 tr:nth-child(odd){
     border: 1px black;
-}
-tr:hover {
-    background-color: grey;
 }
 
 th {
